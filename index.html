@@ -117,6 +117,11 @@ document.addEventListener("DOMContentLoaded", function(){
     left: 0vw;
     z-index: 1;
 }
+/* adding image requirement*/
+	img, object{
+		max-height: 90%
+		max-width: 90%
+}
 /* learned how to add pink and blue buttons so I'll add them here */
 .pink-btn{
     background-color:#ff4da6;
@@ -141,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 
 	<h3>Take a calming moment</h3> <!--adding sakura image-->
-	<img id="calmImage" src="sakura.jpg" width="250">
+	<img src="sakura.jpg" alt="Cherry blossoms"><!--had to change the formatting here and add my jpg-->
 	<p>Resize image:</p>
 	<input type="range" id="sizeSlider" min="120" max="500" value="250">
 	
