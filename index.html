@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
 <head> 
-	<title>Hello World</title>  
+	<title>Burnout vs Temporary Stress</title>  
 ]	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
@@ -38,7 +38,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	<script>
 /* Counters */
 var burnout_score = 0;
 var stress_score = 0;
@@ -72,7 +71,7 @@ function showResults(){
         message = "<br><br>You show strong signs of burnout.";
     }
     else if (stressPercent >= 70){
-        message = "<br><br>Your symptoms match temporary stress.";
+        message = "<br><br>Your symptoms match those of temporary stress.";
     }
     else{
         message = "<br><br>You show a mix of both patterns.";
@@ -87,7 +86,7 @@ function showResults(){
 /* adding the resizable image*/
 window.onload = function(){
     var slider = document.getElementById("sizeSlider");
-    var image = document.getElementById("brainImage");
+    var image = document.getElementById("sakuraImage");
 
     slider.oninput = function(){
         image.style.width = this.value + "px";
@@ -140,6 +139,11 @@ window.onload = function(){
 	<p>Are you feeling like you might have burnout but wonder if it is just temporary stress. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+
+	<h3>Take a calming moment</h3> <!--adding sakura image-->
+	<img id="calmImage" src="sakura.jpg"width="250">
+	<p>Resize image:</p>
+	<input type="range" id="sizeSlider" min="120" max="500" value="250"
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
