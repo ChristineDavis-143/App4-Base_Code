@@ -90,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     slider.addEventListener("input", function(){
         image.style.width = this.value + "px";
-    };
-};
+    }); /*added ) to this*/
+});
 
 </script>	
 
@@ -119,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function(){
 }
 /* adding image requirement*/
 	img, object{
-		max-height: 90%
-		max-width: 90%
+		max-height: 90%;
+		max-width: 90%;
 }
 /* learned how to add pink and blue buttons so I'll add them here */
 .pink-btn{
@@ -146,7 +146,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 
 	<h3>Take a calming moment</h3> <!--adding sakura image-->
-	<img src="sakura.jpg" alt="Cherry blossoms"><!--had to change the formatting here and add my jpg-->
+	<img id="calmImage" src="sakura.jpg" alt="Cherry blossoms"><!--had to change the formatting here and add my jpg-->
+	
 	<p>Resize image:</p>
 	<input type="range" id="sizeSlider" min="120" max="500" value="250">
 	
