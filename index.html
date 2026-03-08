@@ -83,15 +83,6 @@ function showResults(){
         message;
 }
 
-/* adding the resizable image*/
-document.addEventListener("DOMContentLoaded", function(){
-    var slider = document.getElementById("sizeSlider");
-    var image = document.getElementById("calmImage");
-
-    slider.addEventListener("input", function(){
-        image.style.width = this.value + "px";
-    }); /*added ) to this*/
-});
 
 </script>	
 
@@ -148,8 +139,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	<h3>Take a calming moment</h3> <!--adding sakura image-->
 	<img id="calmImage" src="sakura.jpg" alt="Cherry blossoms"><!--had to change the formatting here and add my jpg-->
 	
-	<p>Resize image:</p>
-	<input type="range" id="sizeSlider" min="120" max="500" value="250">
+
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -233,17 +223,17 @@ document.addEventListener("DOMContentLoaded", function(){
 	<div class="w3-container w3-flat-carrot">
 
 		<h1>Results</h1>
-</div>
+	</div>
 
-<div class="w3-container">
+	<div class="w3-container">
 
-<button onclick="showResults()" class="w3-btn w3-green">
-Show Results <!--Make sure to add this so it shows on the page-->
-</button>
+		<button onclick="showResults()" class="w3-btn w3-green">
+			Show Results <!--Make sure to add this so it shows on the page-->
+		</button>
 
-<p id="results"></p><!--make sure the page shows the results and identifies as the results page from the previous question-->
+		<p id="results"></p><!--make sure the page shows the results and identifies as the results page from the previous question-->
 
-</div>
+	</div>
 </div>
 
 
