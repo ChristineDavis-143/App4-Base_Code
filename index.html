@@ -30,7 +30,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <head> 
 	<title>Burnout vs Temporary Stress</title>  
-]	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="w3-colors-flat.css">
@@ -86,7 +86,7 @@ function showResults(){
 /* adding the resizable image*/
 window.onload = function(){
     var slider = document.getElementById("sizeSlider");
-    var image = document.getElementById("sakuraImage");
+    var image = document.getElementById("calmImage");
 
     slider.oninput = function(){
         image.style.width = this.value + "px";
@@ -118,12 +118,12 @@ window.onload = function(){
     z-index: 1;
 }
 /* learned how to add pink and blue buttons so I'll add them here */
-.btn-pink{
+.pink-btn{
     background-color:#ff4da6;
     color:white;
 }
 
-.btn-blue{
+.blue-btn{
     background-color:#4da6ff;
     color:white;
 }
@@ -141,9 +141,9 @@ window.onload = function(){
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 
 	<h3>Take a calming moment</h3> <!--adding sakura image-->
-	<img id="calmImage" src="sakura.jpg"width="250">
+	<img id="calmImage" src="sakura.jpg" width="250">
 	<p>Resize image:</p>
-	<input type="range" id="sizeSlider" min="120" max="500" value="250"
+	<input type="range" id="sizeSlider" min="120" max="500" value="250">
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -157,8 +157,8 @@ window.onload = function(){
 	
     	<div id="content" class="w3-container">
         <p>Have you felt emotionally exhausted for more than 2 weeks?</p> 
-			<a href="#two" onclick= "burnoutAdd()" class="w3-btn pink-btn">Yes</a>
-			<a href="#two" onclick= "temporaryStressAdd()" class="w3-btn blue-btn">No</a>
+			<a href="#two" onclick= "burnoutAdd(1)" class="w3-btn pink-btn">Yes</a>
+			<a href="#two" onclick= "temporaryStressAdd(1)" class="w3-btn blue-btn">No</a>
     	</div> <!-- My first question adding 2 buttons for burnout and stress and letting them be different colors-->
 </div>
 
@@ -169,8 +169,8 @@ window.onload = function(){
 	
 	<div id="content" class="w3-container">
 		<p>Do you feel tired even after sleeping?</p>
-			<a href="#three" onclick= "burnoutAdd()" class="w3-btn pink-btn">Yes</a>
-			<a href="#three" onclick= "temporaryStressAdd()" class="w3-btn blue-btn">No</a>
+			<a href="#three" onclick= "burnoutAdd(1)" class="w3-btn pink-btn">Yes</a>
+			<a href="#three" onclick= "temporaryStressAdd(1)" class="w3-btn blue-btn">No</a>
 	</div><!-- My second question adding 2 buttons if yes then cold; if no allergy-->
 </div>
 
@@ -181,8 +181,8 @@ window.onload = function(){
 	
     	<div id="content" class="w3-container">
         <p>Have you lost motivation for things you usually care about?</p>    
-			<a href="#four" onclick= "burnoutAdd()" class="w3-btn pink-btn">Yes</a>
-			<a href="#four" onclick= "temporaryStressAdd()" class="w3-btn blue-btn">No</a>
+			<a href="#four" onclick= "burnoutAdd(1)" class="w3-btn pink-btn">Yes</a>
+			<a href="#four" onclick= "temporaryStressAdd(1)" class="w3-btn blue-btn">No</a>
 		</div><!--My third question buttons function the same as the last -->
 </div><!--Just figured out I need this div here for spacing. Had too many div's earlier so it was hard to read-->
 
@@ -192,9 +192,9 @@ window.onload = function(){
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you geel detached or numb towards your school or work?</p>    
-			<a href="#five" onclick= "burnoutyAdd()" class="w3-btn pink-btn">Yes</a>
-			<a href="#five" onclick= "temporaryStressAdd()" class="w3-btn blue-btn">No</a>
+        <p>Do you feel detached or numb towards your school or work?</p>    
+			<a href="#five" onclick= "burnoutAdd(1)" class="w3-btn pink-btn">Yes</a>
+			<a href="#five" onclick= "temporaryStressAdd(1)" class="w3-btn blue-btn">No</a>
 		</div>
 </div><!-- Last question from your set, trying to maintain the same/consistent style and indentations-->
 
@@ -205,8 +205,8 @@ window.onload = function(){
 	
     	<div id="content" class="w3-container">
         <p>Are you more irritable than usual?</p>    
-			<a href="#six" onclick="burnoutAdd()" class="w3-btn pink-btn">Yes</a>
-			<a href="#six" onclick="temporaryStressAdd()" class="w3-btn blue-btn">No</a>
+			<a href="#six" onclick="burnoutAdd(1)" class="w3-btn pink-btn">Yes</a>
+			<a href="#six" onclick="temporaryStressAdd(1)" class="w3-btn blue-btn">No</a>
 		</div>
 </div><!--My own question, making sure to change the cold and allergy buttons from the last question because it is flipped in this scenario -->
 
@@ -217,8 +217,8 @@ window.onload = function(){
 	
     	<div id="content" class="w3-container">
         <p>Did this stress start recently (less than 2 weeks ago)?</p>    
-			<a href="#resultsPage" onclick="temporaryStressAdd()" class="w3-btn blue-btn">Yes</a>
-			<a href="#resultsPage" onclick="burnoutAdd()" class="w3-btn pink-btn">No</a>
+			<a href="#resultsPage" onclick="temporaryStressAdd(1)" class="w3-btn blue-btn">Yes</a>
+			<a href="#resultsPage" onclick="burnoutAdd(1)" class="w3-btn pink-btn">No</a>
 		</div><!--My final question. I wonder how I can change the color or style of the buttons so they are pink and blue instead of orange and black? -->
 </div><!--the #resultsPage on the buttons are added to make sure this goes to the results page instead of page 7-->
 
